@@ -37,7 +37,13 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  
+  // Prompts user input
+  enter = parseInt(prompt("Please add the amount of characters you would like to have for your password (Choose between 8 and 128 characters)"));
+  // First if statement for user validation 
+  if (!enter) {
+      alert("This needs a value");
+  } else if (enter < 8 || enter > 128) {
+      // Validates user input
 
   passwordText.value = password;
 
