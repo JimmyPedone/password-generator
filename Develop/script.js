@@ -116,7 +116,22 @@ else if (confirmLowercase) {
 else if (confirmUppercase) {
   choices = space.concat(alpha2);
 };
+// Array placeholder for user generated amount of length
+var password = [];
 
+// --------------------------------------------------------------------------------------------------------------------------------------
+
+// Random selection for all variables
+// for loop begins process to generate a random selection through variables
+// math.floor/math.random code randomizes choices prompted to the user
+for (var i = 0; i < enter; i++) {
+    var chooseChoices = choices[Math.floor(Math.random() * choices.length)];
+    password.push(chooseChoicesChoices);
+}
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
