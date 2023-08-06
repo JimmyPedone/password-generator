@@ -1,6 +1,25 @@
 // Assignment Code that generates the button
 var generateBtn = document.querySelector("#generate");
 
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
+
+const myModal = document.getElementById('exampleModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
+
 //Declaring variables for user input
 var enter;
 var useUppercase;
@@ -139,18 +158,16 @@ function UserInput(passJoin) {
 document.getElementById("password").textContent = passJoin;
 }
 
-var copy = document.querySelector("#copy");
-copy.addEventListener("click", function () {
-    copyPassword();
-});
+// var copy = document.querySelector("#copy");
+// copy.addEventListener("click", function () {
+//     copyPassword();
+// });
+
 // Source: https://youtu.be/9sT03jEwcaw
-function copyPassword() {
-  document.getElementById("password").select();
-  document.execCommand("Copy");
-  alert("Copied to clipboard!");
-}
+// function copyPassword() {
+//   document.getElementById("password").select();
+//   document.execCommand("Copy");
+//   alert("Copied to clipboard!");
+// }
 
 // ------------------------------------------------------------------------------------------------------------------------------------
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
