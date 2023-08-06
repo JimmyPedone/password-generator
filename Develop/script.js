@@ -57,6 +57,69 @@ useCharacter = confirm("Will this password have special characters?");
   passwordText.value = password;
 
 }
+// Else if for 4 negative options
+if (!confirmCharacter && !confirmNumber && !confirmUppercase && !confirmLowercase) {
+  choices = alert("You must choose a criteria!");
+  //   generatePassword() - This loops it, but makes it impossible to refresh the page
 
+}
+// First if statement that uses user input prompts to determine choices
+
+// "Else if's" for 4 positive choices
+else if (useUppercase && useLowercase && useNumber && useCharacter) {
+  choices = character.concat(number, alpha, alpha2);
+}
+// "Else if's" for 3 positive choices
+else if (useUppercase && useLowercase && useNumber && useCharacter) {
+  choices = character.concat(number, alpha2);
+}
+else if (useUppercase && useLowercase && useNumber && useCharacter) {
+  choices = character.concat(number, alpha);
+}
+else if (useUppercase && useLowercase && useNumber && useCharacter) {
+  choices = character.concat(alpha, alpha2);
+}
+else if (useUppercase && useLowercase && useNumber && useCharacter) {
+  choices = number.concat(alpha, alpha2);
+}
+// "Else if's" for 2 positive choices 
+else if (confirmCharacter && confirmNumber) {
+choices = character.concat(number);
+}
+else if (confirmCharacter && confirmLowercase) {
+choices = character.concat(alpha);
+} 
+else if (confirmCharacter && confirmUppercase) {
+choices = character.concat(alpha2);
+}
+else if (confirmLowercase && confirmNumber) {
+choices = alpha.concat(number);
+} 
+else if (confirmLowercase && confirmUppercase) {
+choices = alpha.concat(alpha2);
+} 
+else if (confirmNumber && confirmUppercase) {
+choices = number.concat(alpha2);
+}
+
+// Else if for 1 positive option
+else if (confirmCharacter) {
+  choices = character;
+}
+else if (confirmNumber) {
+  choices = number;
+}
+else if (confirmLowercase) {
+  choices = alpha;
+}
+// Created space variable to fill uppercase conversion
+else if (confirmUppercase) {
+  choices = space.concat(alpha2);
+};
+
+// Created space variable to fill uppercase conversion
+else if (confirmUppercase) {
+  choices = space.concat(alpha2);
+};
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
