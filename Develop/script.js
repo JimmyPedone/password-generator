@@ -112,14 +112,11 @@ else if (confirmNumber) {
 else if (confirmLowercase) {
   choices = alpha;
 }
-// Created space variable to fill uppercase conversion
+// Uppercase conversion
 else if (confirmUppercase) {
   choices = space.concat(alpha2);
 };
 
-// Created space variable to fill uppercase conversion
-else if (confirmUppercase) {
-  choices = space.concat(alpha2);
-};
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
