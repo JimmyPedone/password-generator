@@ -35,6 +35,13 @@ var toUpper = function (x) {
 // Transformation method "map" allows for upper-case conversion
 alpha2 = alpha.map(toUpper);
 
+var get = document.querySelector("#generate");
+
+get.addEventListener("click", function () {
+    ps = generatePassword();
+    document.getElementById("password").placeholder = ps;
+});
+
 // ---------------------------------------------------------------------------------------------------------------------------------
 
 // Alphabetical characters
@@ -149,13 +156,13 @@ for (var i = 0; i < enter; i++) {
 }
 
 // Joins password array and converts it to a string
-var passJoin = password.join("");
-UserInput(passJoin);
-return passJoin;
+var ps = password.join("");
+UserInput(ps);
+return ps;
 
 // Puts the password value into the textbox
-function UserInput(passJoin) {
-document.getElementById("password").textContent = passJoin;
+function UserInput(ps) {
+document.getElementById("password").textContent = ps;
 }
 
 // var copy = document.querySelector("#copy");
