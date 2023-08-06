@@ -129,7 +129,22 @@ for (var i = 0; i < enter; i++) {
     password.push(chooseChoicesChoices);
 }
 
+// Joins password array and converts it to a string
+var passJoin = password.join("");
+UserInput(passJoin);
+return passJoin;
 
+// Puts the password value into the textbox
+function UserInput(passJoin) {
+document.getElementById("password").textContent = passJoin;
+}
+
+// Source: https://youtu.be/9sT03jEwcaw
+function copyPassword() {
+  document.getElementById("password").select();
+  document.execCommand("Copy");
+  alert("Copied to clipboard!");
+}
 
 // ------------------------------------------------------------------------------------------------------------------------------------
 
