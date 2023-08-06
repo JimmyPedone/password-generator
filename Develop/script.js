@@ -139,6 +139,10 @@ function UserInput(passJoin) {
 document.getElementById("password").textContent = passJoin;
 }
 
+var copy = document.querySelector("#copy");
+copy.addEventListener("click", function () {
+    copyPassword();
+});
 // Source: https://youtu.be/9sT03jEwcaw
 function copyPassword() {
   document.getElementById("password").select();
